@@ -25,12 +25,19 @@ public class Romain {
 		force -= forceCoup;
 		
 		if (force>0) {
-			parler("Aïe");
+			parler("Aï¿½e");
 			
 		}
 		else {
 			parler("J'abandonne ...");
 		}
+		
+	}
+	public static void main(String[] args) {
+		Romain jeantix= new Romain("Jeantix",3);
+		System.out.println(jeantix.prendreParole());
+		jeantix.parler("SatanÃ© Gaulois");
+		jeantix.recevoirCoup(2);
 		
 	}
 	

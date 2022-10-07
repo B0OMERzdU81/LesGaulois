@@ -5,7 +5,7 @@ public class Gaulois {
 	private int force;
 	private int effetPotion =1;
 	
-	public Gaulois(String nom, int force, int effetPotion) {
+	public Gaulois(String nom, int force) {
 		this.nom = nom;
 		this.force = force;
 	}
@@ -19,21 +19,24 @@ public class Gaulois {
 	}
 	
 	private String prendreParole() {
-		return "Le gaulois" + nom + " : ";
+		return "Le gaulois " + nom + " : ";
 	}
 	
 	public void frapper(Romain romain) {
-		System.out.println(nom + "envoie une bonne beigne dans la mâchoire de " +romain.getNom());
+		System.out.println(nom + "envoie une bonne beigne dans la mÃ¢choire de " +romain.getNom());
 		romain.recevoirCoup(force/3);
 	}
-	
+
 	@Override
 	public String toString() {
 		return "Gaulois [nom=" + nom + ", force=" + force + ", effetPotion=" + effetPotion + "]";
-	}
-	
+}
+
 	public static void main(String[] args) {
-		//TODO créer un main permettant de tester la classe Gaulois
+		Gaulois asterix= new Gaulois("Asterix",8);
+		//System.out.println(asterix);
+		asterix.parler("Bonjour Romain");
+		
 	}
 	
 }
