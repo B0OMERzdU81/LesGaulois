@@ -1,4 +1,5 @@
 package personnages;
+import personnages.Equipement;
 
 public class Romain {
 	private String nom;
@@ -23,6 +24,8 @@ public class Romain {
 	}
 	
 	public void recevoirCoup(int forceCoup) {
+		assert force>0;
+		int f =force;
 		force -= forceCoup;
 		
 		if (force>0) {
@@ -32,6 +35,7 @@ public class Romain {
 		else {
 			parler("J'abandonne ...");
 		}
+		assert force<f;
 		
 	}
 	public static void main(String[] args) {
@@ -39,6 +43,7 @@ public class Romain {
 		System.out.println(jeantix.prendreParole());
 		jeantix.parler("Satané Gaulois");
 		jeantix.recevoirCoup(2);
+		Equipement.BOUCLIER;
 		
 	}
 	
