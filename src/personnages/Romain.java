@@ -7,6 +7,7 @@ public class Romain {
 	public Romain(String nom, int force) {
 		this.nom=nom;
 		this.force=force;
+		assert force>0;
 	}
 	
 	public String getNom() {
@@ -34,7 +35,7 @@ public class Romain {
 		
 	}
 	public static void main(String[] args) {
-		Romain jeantix= new Romain("Jeantix",3);
+		Romain jeantix= new Romain("Jeantix",6);
 		System.out.println(jeantix.prendreParole());
 		jeantix.parler("Satané Gaulois");
 		jeantix.recevoirCoup(2);
