@@ -1,4 +1,5 @@
 package personnages;
+import personnages.Druide;
 
 public class Gaulois {
 	private String nom;
@@ -24,7 +25,21 @@ public class Gaulois {
 	
 	public void frapper(Romain romain) {
 		System.out.println(nom + "envoie une bonne beigne dans la mâchoire de " +romain.getNom());
-		romain.recevoirCoup(force/3);
+		if(effetPotion>1){
+			romain.recevoirCoup((force/3)*3);
+			}
+		else {
+			romain.recevoirCoup(force/3);
+
+		}
+		}
+	
+	public void boirePotion	(int forcePotion ) {
+		effetPotion= effetPotion+forcePotion;
+		System.out.println("Merci Druide, je sens ma force est " + forcePotion + " fois décuplée");
+		
+		
+		
 	}
 
 	@Override
@@ -34,8 +49,9 @@ public class Gaulois {
 
 	public static void main(String[] args) {
 		Gaulois asterix= new Gaulois("Asterix",8);
-		//System.out.println(asterix);
+		Druide panoramix = new Druide ("Panoramix",5,10);
 		asterix.parler("Bonjour Romain");
+		asterix.boirePotion(panoramix.preparerPotion());
 		
 	}
 	
