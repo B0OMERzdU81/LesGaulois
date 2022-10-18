@@ -114,48 +114,42 @@ public class Romain {
 		
 	
 	
-
-	
 	public void sEquiper(Equipement protection) {
-		switch (protection) {
-			case CASQUE:
-				repartitionEquipement(protection);
+		switch (nbEquipement) {
+			case 1:
+				repartitionEquipement1(protection);
 				break;
 					
-			case BOUCLIER:
-				repartitionEquipement(protection);
+			case 2:
+				repartitionEquipement2(protection);
 				break;
-
-	}
-	}
-
-	private void repartitionEquipement(Equipement protection) {
-		String soldat = "Le soldat ";
-		if(nbEquipement==0) {
-			equipements[0]=protection;
-			nbEquipement+=1;
-			System.out.println(soldat+getNom()+" s'équipe avec un " + protection.toString());
-		}
-		else if (nbEquipement==1) {
-			if(equipements[0]==protection) {
-				System.out.println(soldat +getNom()+ " possède déjà un " + protection.toString() + "!");
-			}
-			else {
-				equipements[1]=protection;
+			
+			default:
+				equipements[0]=protection;
 				nbEquipement+=1;
-				System.out.println(soldat+getNom()+" s'équipe avec un " + protection.toString());
+				System.out.println("Le soldat " +getNom()+" s'équipe avec un " + protection.toString());
+		}	
+	}
+
+	
+	private void repartitionEquipement1(Equipement protection) {
+		if(equipements[0]==protection) {
+			System.out.println("Le soldat "+getNom()+ " possède déjà un " + protection.toString() + "!");
+		}
+		else {
+			equipements[1]=protection;
+			nbEquipement+=1;
+			System.out.println("Le soldat "+getNom()+" s'équipe avec un " + protection.toString());
 			}
 		}
 		
-		
-		else {
-			System.out.println(soldat + getNom() + " est déjà bien protégé !");
+	
+	private void repartitionEquipement2(Equipement protection) {
+
+			System.out.println("Le soldat " + getNom() + " est déjà bien protégé !");
 		}
-	}
 	
-	
-	
-	
+
 	
 	public static void main(String[] args) {
 		Romain jeantix= new Romain("Jeantix",6);
