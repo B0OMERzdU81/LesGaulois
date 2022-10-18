@@ -10,6 +10,7 @@ public class Druide {
 	private int forcePotion =1;
 	
 	
+	
 	public Druide(String nom, int effetPotionMin, int effetPotionMax) {
 		this.nom=nom;
 		this.effetPotionMin=effetPotionMin;
