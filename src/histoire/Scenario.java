@@ -16,10 +16,8 @@ public class Scenario {
 		Gaulois obelix= new Gaulois("Obelix",20);
 		panoramix.parler("Je vais aller préparer une petite potion...");
 		int nb=panoramix.preparerPotion();
-		if(panoramix.booster(obelix.getNom())==1) {
-			obelix.parler("Par Bélénos, c'est pas juste");
-		}
-		asterix.boirePotion(nb);
+		panoramix.booster(obelix);
+		panoramix.booster(asterix);
 		
 		
 		asterix.parler("Bonjour");

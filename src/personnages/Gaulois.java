@@ -24,7 +24,7 @@ public class Gaulois {
 	}
 	
 	public void frapper(Romain romain) {
-		System.out.println(nom + "envoie une bonne beigne dans la mâchoire de " +romain.getNom());
+		System.out.println(nom + " envoie une bonne beigne dans la mâchoire de " +romain.getNom());
 		if(effetPotion>1){
 			romain.recevoirCoup((force/3)*3);
 			}
@@ -36,7 +36,7 @@ public class Gaulois {
 	
 	public void boirePotion	(int forcePotion ) {
 		effetPotion= effetPotion+forcePotion;
-		System.out.println("Merci Druide, je sens ma force est " + forcePotion + " fois décuplée");
+		System.out.println("Merci Druide, je sens que ma force est " + forcePotion + " fois décuplée");
 		
 		
 		
